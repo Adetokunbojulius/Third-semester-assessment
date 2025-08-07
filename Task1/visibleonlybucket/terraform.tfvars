@@ -1,0 +1,1 @@
+bucket_name = "cloudlaunch-visible-only-bucket"
