@@ -8,3 +8,8 @@ output "website_url_config" {
   value = "http://${aws_s3_bucket_website_configuration.static_site_website.website_endpoint}"
   description = "URL of the static website"
 }
+
+
+output "cloudfront_domain_url" {
+  value = "https://${aws_cloudfront_distribution.s3_distribution.domain_name}"
+}
