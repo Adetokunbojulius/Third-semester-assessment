@@ -79,23 +79,6 @@ resource "aws_s3_bucket_policy" "public_read_policy" {
 
 
 
-##### To upload to s3
-# resource "aws_s3_object" "index" {
-#   bucket = aws_s3_bucket.static_site.id
-#   key    = "index.html"
-#   source = "index.html"
-#   acl    = "public-read"
-#   content_type = "text/html"
-# }
-
-# resource "aws_s3_object" "error" {
-#   bucket       = aws_s3_bucket.static_site.id
-#   key          = "error.html"
-#   source       = "error.html"
-#   acl          = "public-read"
-#   content_type = "text/html"
-# }
-
 
 resource "aws_s3_object" "index" {
   bucket       = aws_s3_bucket.static_site.id
@@ -109,4 +92,42 @@ resource "aws_s3_object" "error" {
   key          = "error.html"
   source       = "${path.module}/error.html"
   content_type = "text/html"
+}
+
+
+
+
+### Adding cloudfront to the bucket
+resource "aws_cloudfront_distribution" "cdn" {
+  enabled             = true
+  default_root_object = "index.html"
+
+  origin {
+    domain_name = aws_s3_bucket.static_site.bucket_regional_domain_name
+    origin_id   = "S3-${aws_s3_bucket.static_site.id}"
+  }
+
+  default_cache_behavior {
+    target_origin_id       = "S3-${aws_s3_bucket.static_site.id}"
+    viewer_protocol_policy = "allow-all" # Allow HTTP and HTTPS
+    allowed_methods        = ["GET", "HEAD"]
+    cached_methods         = ["GET", "HEAD"]
+
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+  }
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+
+  viewer_certificate {
+    cloudfront_default_certificate = true # Needed even for HTTP
+  }
 }

@@ -54,12 +54,12 @@
 
 
 ### The working terminal
-![terminal-on](./Task1/publicaccessbucket/s3-website-terminal1.png)
+![terminal-on](./Task1/publicaccessbucket/s3-terminal1-cdn.png)
 
 
 
 ### The destroyed terminal
-![terminal-off](./Task1/publicaccessbucket/s3-website-terminal2.png)
+![terminal-off](./Task1/publicaccessbucket/s3-terminal.cdn.destroy2.png)
 
 
 
