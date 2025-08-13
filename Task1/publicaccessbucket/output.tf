@@ -11,5 +11,5 @@ output "website_url_config" {
 
 
 output "cloudfront_domain_url" {
-  value = "https://${aws_cloudfront_distribution.s3_distribution.domain_name}"
+  value = "https://${aws_cloudfront_distribution.cdn.domain_name}"
 }

@@ -48,10 +48,17 @@
 ## Here is the s3 static website url
 [s3-website](http://cloud-launch-site-bucket-gabriel.s3-website-us-east-1.amazonaws.com)
 
+## Here is the s3 cloudfront website url
+[s3-cloudfront-url](http://cloud-launch-site-bucket-gabriel.s3-website-us-east-1.amazonaws.com)
+
 ### The webpage image
 ![webpage](./Task1/publicaccessbucket/s3-website.png)
 
+### The webpage image with cloudfront
+![webpage-cloudfront](./Task1/publicaccessbucket/s3cloudfront.png)
 
+### The working terminal with s3 cloudfront
+![terminal-on-s3cloudfront](./Task1/publicaccessbucket/s3cloudfront2.png)
 
 ### The working terminal
 ![terminal-on](./Task1/publicaccessbucket/s3-terminal1-cdn.png)
