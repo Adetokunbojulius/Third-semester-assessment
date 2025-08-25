@@ -3,4 +3,3 @@
 .terraform*
 .terraform/
 *.tfstate.backup
-s3plan
