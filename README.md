@@ -46,27 +46,23 @@
 ## Kindly look at the code snippets for more understanding (visibleonlybucket)
 
 ## Here is the s3 static website url
-[s3-website](http://cloud-launch-site-bucket-gabriel.s3-website-us-east-1.amazonaws.com)
+[s3-website](http://cloud-launch-site-bucket-adetokunbo-julius.s3-website-us-east-1.amazonaws.com)
 
-## Here is the s3 cloudfront website url
-[s3-cloudfront-url](http://cloud-launch-site-bucket-gabriel.s3-website-us-east-1.amazonaws.com)
+## Here is the s3 static website url cloudfront
+[cloudfront-url](https://d2ciebuzsrx7nb.cloudfront.net)
 
-### The webpage image
-![webpage](./Task1/publicaccessbucket/s3-website.png)
+### The webpage image cloudfront
+![webpage](/Task1/publicaccessbucket/julius-cloudfront-webpage.png)
 
-### The webpage image with cloudfront
-![webpage-cloudfront](./Task1/publicaccessbucket/s3cloudfront.png)
 
-### The working terminal with s3 cloudfront
-![terminal-on-s3cloudfront](./Task1/publicaccessbucket/s3cloudfront2.png)
 
 ### The working terminal
-![terminal-on](./Task1/publicaccessbucket/s3-terminal1-cdn.png)
+![terminal-on](/Task1/publicaccessbucket/julius-working-terminal.png)
 
 
 
 ### The destroyed terminal
-![terminal-off](./Task1/publicaccessbucket/s3-terminal.cdn.destroy2.png)
+![terminal-off](/Task1/publicaccessbucket/julius-destroy-terminal.png)
 
 
 

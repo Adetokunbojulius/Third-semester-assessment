@@ -1,1 +1,1 @@
-bucket_name = "cloudlaunch-visible-only-bucket"
+bucket_name = "cloudlaunch-visible-only-bucket-adetokunbo-julius-3"
